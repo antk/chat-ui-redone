@@ -13,6 +13,8 @@ angular.module('chatApp.list', ['ngRoute'])
   $scope.uid = parseInt($routeParams.id, 10);
   // console.log($scope.uid);
   if(!isNaN($scope.uid)) {
-    UserChatService.getUserData($scope.uid);
+    UserChatService.getUserData($scope.uid).then(function(data) {
+      console.log(data);
+    });
   }
 }]);

@@ -32,9 +32,10 @@ angular.module('chatApp')
       }
       else {
         console.log('this service has data, send that instead');
-
+        deferred.resolve(data);
       }
-    };
+      return deferred.promise;
+    }
 
     return {
       getUserData: getUserData

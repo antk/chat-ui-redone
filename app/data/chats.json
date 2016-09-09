@@ -1,5 +1,5 @@
 {
-"0":  {
+  "0":  {
     "participants":[0, 1], 
     "messages": [
       {"msg_id":0, "sender_id":0, "text":"i got da best webz", "datetime":1470927487072},
@@ -8,7 +8,7 @@
       {"msg_id":3, "sender_id":1, "text":"puny spider", "datetime":1470927667072}
     ]
   },
-"1":  {
+  "1":  {
     "participants":[0, 2, 4], 
     "messages": [
       {"msg_id":0, "sender_id":0, "text":"i got da best webz", "datetime":1470927727072},
@@ -19,7 +19,7 @@
       {"msg_id":5, "sender_id":2, "text":"<img src='https://s-media-cache-ak0.pinimg.com/564x/79/58/6a/79586a15370acd0027a4e07db6dc5ca4.jpg'/>", "datetime":1470928027072}
     ]
   },
-"2":  {
+  "2":  {
     "participants":[0, 1, 3], 
     "messages": [
       {"msg_id":0, "sender_id":1, "text":"SMASH", "datetime":1470864240000},
@@ -27,7 +27,7 @@
       {"msg_id":2, "sender_id":0, "text":"thwip! thwip!", "datetime":1470864600000}
     ]
   },
-"3":  {
+  "3":  {
     "participants":[0, 2, 3], 
     "messages": [
       {"msg_id":0, "sender_id":2, "text":"ur fighting on the wrong side", "datetime":1470864960000},
@@ -39,7 +39,7 @@
       {"msg_id":6, "sender_id":0, "text":"hi guys!", "datetime":1470869640000}
     ]
   },
-"4":  {
+  "4":  {
     "participants":[0, 2, 4, 5, 6], 
     "messages": [
       {"msg_id":0, "sender_id":2, "text":"what's the plan tonight?", "datetime":1470928687072},
@@ -50,7 +50,7 @@
       {"msg_id":5, "sender_id":0, "text":"how YOU doin", "datetime":1470928987072}
     ]
   },
-"5":  {
+  "5":  {
     "participants":[0, 10], 
     "messages": [
       {"msg_id":0, "sender_id":0, "text":"why did the flash leave the taco bell so quick?", "datetime":1470957311337},
@@ -61,7 +61,7 @@
       {"msg_id":5, "sender_id":10, "text":"i h8 u", "datetime":1470957611337}
     ]
   },
-"6":  {
+  "6":  {
     "participants":[0, 9], 
     "messages": [
       {"msg_id":0, "sender_id":0, "text":"What does Superman put in his beverages?", "datetime":1470952138162},
@@ -69,7 +69,7 @@
       {"msg_id":2, "sender_id":9, "text":"...", "datetime":1470952258162}
     ]
   },
-"7":  {
+  "7":  {
     "participants":[0, 8], 
     "messages": [
       {"msg_id":0, "sender_id":0, "text":"What is Batman's favorite fruit?", "datetime":1470952015965},
@@ -78,7 +78,7 @@
       {"msg_id":3, "sender_id":9, "text":"i am the night", "datetime":1470952195965}
     ]
   },
-"8":  {
+  "8":  {
     "participants":[0, 11], 
     "messages": [
       {"msg_id":0, "sender_id":0, "text":"what do you call a snobby criminal walking down the stairs?", "datetime":1470952714370},
@@ -87,7 +87,7 @@
       {"msg_id":3, "sender_id":11, "text":"nice", "datetime":1470952744370}
     ]
   },
-"9":  {
+  "9":  {
     "participants":[0, 1, 2, 3, 4], 
     "messages": [
       {"msg_id":0, "sender_id":1, "text":"Have you ever tried to eat a clock? It's very time consuming", "datetime":1470952487783},
@@ -96,6 +96,13 @@
       {"msg_id":3, "sender_id":4, "text":"Did you hear about the guy who got hit in the head with a can of soda? He was lucky it was a soft drink", "datetime":1470952195965},
       {"msg_id":4, "sender_id":0, "text":"hi guys!", "datetime":1470952517783},
       {"msg_id":5, "sender_id":8, "text":"Two boll weevils grew up in South Carolina. One went to Hollywood and became a famous actor. The other stayed behind in the cotton fields and never amounted to much. The second one, naturally, became known as the lesser of two weevils.", "datetime":1470952517783 }
+    ]
+  }, 
+  "10": {
+    "participants":[1, 2],
+    "messages": [
+      {"msg_id":0, "sender_id":1, "text":"This chat should not show up for user 0", "datetime": 1470952517783},
+      {"msg_id":1, "sender_id":2, "text":"No, it shouldn't", "datetime": 1470952517783}
     ]
   }
 }
