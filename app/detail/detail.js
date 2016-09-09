@@ -11,9 +11,10 @@ angular.module('chatApp.detail', ['ngRoute'])
 
 .controller('DetailCtrl', ['$scope', '$routeParams', 'UserChatService',
   function($scope, $routeParams, UserChatService) {
-    var uid = parseInt($routeParams.uid, 10);
+    $scope.userId = parseInt($routeParams.uid, 10);
     var cid = parseInt($routeParams.id, 10);
-    UserChatService.getChatById(uid, cid).then(function(chat) {
+    UserChatService.getChatById($scope.userId, cid).then(function(chat) {
+      $scope.participants = chat.participants;
       $scope.messages = chat.messages;
     });
   }
