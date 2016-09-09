@@ -44,7 +44,7 @@ gulp.task('connect', function() {
   connect.server({
     root: ['app'],
     livereload: true,
-    port: 8000,
+    port: 8001,
     middleware: function(connect) {
       return [connect().use('/bower_components', connect.static('bower_components'))];
     }

@@ -14,7 +14,16 @@ angular.module('chatApp.list', ['ngRoute'])
   // console.log($scope.uid);
   if(!isNaN($scope.uid)) {
     UserChatService.getUserData($scope.uid).then(function(data) {
-      console.log(data);
+      $scope.userChats = data.chats;
+      var newChatsArray = [];
+      for(var i=0; i<data.chats.length; i++) {
+        var obj = {lastDateTime:0, chat:{}};
+        obj.lastDateTime = data.chats[i].messages[data.chats[i].messages.length-1].datetime;
+        obj.chat = data.chats[i];
+        newChatsArray.push(obj);
+      }
+      $scope.userChats = newChatsArray;
+      console.log($scope.userChats);
     });
   }
 }]);
