@@ -4,7 +4,7 @@ angular.module('chatApp')
 
 .factory('UserChatService', ['$q', 'DataService', 
   function($q, DataService) {
-    var data = {user:{}, chats:[]};
+    var data = {user:{}, chats:{}};
 
     var getUserData = function(uid) {
       var deferred = $q.defer();
@@ -30,7 +30,7 @@ angular.module('chatApp')
                   pArr.push(userData[aChat.participants[i]]);
                 }
                 aChat.participants = pArr;
-                data.chats.push(aChat);
+                data.chats[chatId] = aChat;
               }
             }
             deferred.resolve(data);
@@ -44,8 +44,15 @@ angular.module('chatApp')
       return deferred.promise;
     }
 
+    var getChatById = function(uid, cid) {
+      return getUserData(uid).then(function(userData) {
+        return userData.chats[cid];
+      });
+    }
+
     return {
-      getUserData: getUserData
+      getUserData: getUserData,
+      getChatById: getChatById
     };
   }
 ]);

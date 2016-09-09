@@ -1,7 +1,7 @@
 <div class="chat-list-container content-container" set-height>
   <ul class="chat-list">
     <li ng-repeat="chatObj in userChats | orderBy:'-lastDateTime'">
-      <a ng-href="#!/details/{{uid}}/{{chatObj.chat.chat_id}}">
+      <a ng-href="#!/detail/{{uid}}/{{chatObj.chat.chat_id}}">
         <div class="participants" ng-repeat="participant in chatObj.chat.participants track by $index">
           <strong>{{ participant.firstName }}{{ $last ? '' : ',' }}</strong>
         </div>
