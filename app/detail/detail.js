@@ -11,6 +11,7 @@ angular.module('chatApp.detail', ['ngRoute'])
 
 .controller('DetailCtrl', ['$scope', '$routeParams', 'UserChatService',
   function($scope, $routeParams, UserChatService) {
+    $scope.animateClass = 'animate-details';
     $scope.userId = parseInt($routeParams.uid, 10);
     var cid = parseInt($routeParams.id, 10);
     UserChatService.getChatById($scope.userId, cid).then(function(chat) {

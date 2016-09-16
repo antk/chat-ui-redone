@@ -1,0 +1,11 @@
+.animate-view { 
+  -webkit-transition: .2s linear all; /* Safari/Chrome */
+  -moz-transition: .2s linear all; /* Firefox */
+  -o-transition: .2s linear all; /* Opera */
+  transition: .2s linear all; /* IE10+ and Future Browsers */
+}
+.animate-view.animate-list.ng-enter { opacity: 0; -webkit-transform: translateX(-100%);}
+.animate-view.animate-list.ng-leave { opacity: 1; }
+
+.animate-view.animate-details.ng-enter { opacity: 0; -webkit-transform: translateX(100%); }
+.animate-view.animate-details.ng-leave { opacity: 1; }

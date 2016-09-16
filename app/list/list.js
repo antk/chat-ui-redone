@@ -11,7 +11,7 @@ angular.module('chatApp.list', ['ngRoute'])
 
 .controller('ListCtrl', ['$scope', '$routeParams', 'UserChatService', function($scope, $routeParams, UserChatService) {
   $scope.uid = parseInt($routeParams.id, 10);
-  // console.log($scope.uid);
+  $scope.animateClass = 'animate-list';
   if(!isNaN($scope.uid)) {
     UserChatService.getUserData($scope.uid).then(function(data) {
       var chatsArray = [];
