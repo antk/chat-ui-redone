@@ -73,9 +73,9 @@
     "participants":[0, 8], 
     "messages": [
       {"msg_id":0, "sender_id":0, "text":"What is Batman's favorite fruit?", "datetime":1470952015965},
-      {"msg_id":1, "sender_id":9, "text":"Ba na na na na na na na na na na na na na grapefruit.", "datetime":1470952075965},
+      {"msg_id":1, "sender_id":8, "text":"Ba na na na na na na na na na na na na na grapefruit.", "datetime":1470952075965},
       {"msg_id":2, "sender_id":0, "text":"You took the punch line! =(", "datetime":1470952135965},
-      {"msg_id":3, "sender_id":9, "text":"i am the night", "datetime":1470952195965}
+      {"msg_id":3, "sender_id":8, "text":"i am the night", "datetime":1470952195965}
     ]
   },
   "8":  {
@@ -88,7 +88,7 @@
     ]
   },
   "9":  {
-    "participants":[0, 1, 2, 3, 4], 
+    "participants":[0, 1, 2, 3, 4, 8], 
     "messages": [
       {"msg_id":0, "sender_id":1, "text":"Have you ever tried to eat a clock? It's very time consuming", "datetime":1470952487783},
       {"msg_id":1, "sender_id":2, "text":"I'm reading a book about anti-gravity. It's impossible to put down", "datetime":1470952497783},

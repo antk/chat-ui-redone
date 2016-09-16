@@ -22,12 +22,14 @@ angular.module('chatApp')
             for(var chatId in chatData) {
               var aChat = chatData[chatId];
               var foundIdx = aChat.participants.indexOf(uid);
-              if(foundIdx >= 0) {
+              if(foundIdx >= 0) { // found a chat where the user is a participant
                 aChat.chat_id = chatId;
-                aChat.participants.splice(foundIdx, 1);
+                aChat.participants.splice(foundIdx, 1); // remove the user in the participants array, already established
                 var pArr = [];
-                for(var i=0; i<aChat.participants.length; i++) {
-                  pArr.push(userData[aChat.participants[i]]);
+                for(var i=0; i<aChat.participants.length; i++) { // replace user id with user objects
+                  var pObj = userData[aChat.participants[i]];
+                  pObj.id = aChat.participants[i];
+                  pArr.push(pObj); 
                 }
                 aChat.participants = pArr;
                 data.chats[chatId] = aChat;
