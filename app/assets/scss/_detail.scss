@@ -1,6 +1,8 @@
 .chat-detail {
   .message-detail-container {
     background: #eee;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     .chat-detail-content { 
       background: #eee;
     }
