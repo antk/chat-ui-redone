@@ -9,7 +9,6 @@ angular.module('chatApp')
     var getUserData = function(uid) {
       var deferred = $q.defer();
       if(!data.user.id) {
-        console.log('no data yet, get it');
         DataService.getChats().then(function(chatData) {
           DataService.getUsers().then(function(userData) {
             for(var userId in userData) {
@@ -40,7 +39,6 @@ angular.module('chatApp')
         });
       }
       else {
-        console.log('this service has data, send that instead');
         deferred.resolve(data);
       }
       return deferred.promise;
