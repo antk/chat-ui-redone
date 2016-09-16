@@ -12,7 +12,7 @@ angular.module('chatApp')
         var footerHeight = footer ? footer.offsetHeight: 0;
         var windowHeight = $window.innerHeight;
 
-        var h = $element.attr('data-v-type') == 'list' ? windowHeight - headerHeight : windowHeight - headerHeight - footerHeight;
+        var h = footer ? windowHeight - headerHeight : windowHeight - headerHeight - footerHeight;
         $element.css('height', h + 'px');
       })      
     }
