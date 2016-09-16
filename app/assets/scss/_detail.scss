@@ -73,4 +73,19 @@
       }
     }
   }
+  .new-message-field { 
+    border-top: 1px solid #ccc; 
+    width: 100%; 
+    position: absolute; 
+    bottom: 0; 
+  }
+  .new-message-inputs { 
+    padding: 10px; background-color: #fff; 
+    input[type="text"] { border: 1px solid #eee; padding: 5px; width: 75%; }
+    input[type="submit"] { border: 1px solid; width: 15%; }
+    #msgEl { display: inline-block; width: 60%; padding: 5px; border: 1px solid #ccc; margin-left: 10%; }
+    .send-link { color: #2281FB; position: absolute; bottom: 15px; right: 10px; }
+    .upload-link { position: absolute;  bottom: 0; bottom: 13px; }
+    .camera-link { position: absolute;  bottom: 0; bottom: 13px; margin-left: 15px; }
+  }
 }
