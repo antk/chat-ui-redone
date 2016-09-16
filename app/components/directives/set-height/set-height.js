@@ -11,7 +11,8 @@ angular.module('chatApp')
         var headerHeight = header ? header.offsetHeight : 0;
         var footerHeight = footer ? footer.offsetHeight: 0;
         var windowHeight = $window.innerHeight;
-        var h = windowHeight - headerHeight - footerHeight;
+
+        var h = $element.attr('data-v-type') == 'list' ? windowHeight - headerHeight : windowHeight - headerHeight - footerHeight;
         $element.css('height', h + 'px');
       })      
     }
