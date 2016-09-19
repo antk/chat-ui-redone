@@ -1,5 +1,5 @@
 <section-header title="Chats" type="list"></section-header>
-<div class="chat-list-container content-container" set-height>
+<div data-v-type='list' class="chat-list-container content-container" set-height>
   <ul class="chat-list">
     <li ng-repeat="chatObj in userChats | orderBy:'-lastDateTime'">
       <a ng-href="#!/detail/{{uid}}/{{chatObj.chat.chat_id}}">

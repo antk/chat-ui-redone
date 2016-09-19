@@ -48,7 +48,11 @@ angular.module('chatApp')
       return getUserData(uid).then(function(userData) {
         return userData.chats[cid];
       });
-    }
+    };
+
+    var addMessage = function(cid, msg) {
+
+    };
 
     return {
       getUserData: getUserData,

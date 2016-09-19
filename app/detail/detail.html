@@ -1,6 +1,6 @@
 <section-header type="detail" title="{{pageTitle}}"></section-header>
 <div class="chat-detail">
-  <div ng-if="messages" class="message-detail-container content-container" set-height>
+  <div ng-if="messages" class="message-detail-container content-container" set-height scroll-bottom="messages">
     <ul class="messages">
       <li class="message-container" ng-repeat="msg in messages track by $index" 
           ng-class="{'self': msg.sender_id==userId, 'last right': msg.sender_id==userId && msg.last, 'last left': msg.last && msg.sender_id != userId }">
@@ -14,7 +14,7 @@
   <div class="new-message-field" id="footer">
     <form class="new-message-inputs">
       <a class="upload-link" href="javascript:alert('demo')"><svg class="icon icon-upload"><use xlink:href="#icon-upload"></use></svg></a>
-      <div id="msgEl" contenteditable="true" ng-keyup="setMessage($event)" ng-keydown="checkForShiftEnter($event)"></div>
+      <div id="msgEl" contenteditable="true" ng-keyup="setMessage($event)"></div>
       <input type="hidden" ng-model="newMessage"/>
       <a class="camera-link" href="javascript:alert('camera link')"><svg class="icon icon-camera"><use xlink:href="#icon-camera"></use></svg></a>
       <a class="send-link" href="javascript:void(0)" ng-click="insertMessage(null, true)">Send</a>

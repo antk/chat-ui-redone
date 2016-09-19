@@ -2,7 +2,7 @@
 
 angular.module('chatApp')
 
-.directive('setHeight', ['$window', function($window) {
+.directive('setHeight', ['$window', '$timeout', function($window, $timeout) {
   return {
     link: function($scope, $element, $attrs) {
       angular.element(document).ready(function() {
@@ -12,8 +12,8 @@ angular.module('chatApp')
         var footerHeight = footer ? footer.offsetHeight: 0;
         var windowHeight = $window.innerHeight;
 
-        var h = footer ? windowHeight - headerHeight : windowHeight - headerHeight - footerHeight;
-        $element.css('height', h + 'px');
+        var h = $element.attr('data-v-type') == 'list' ? windowHeight - headerHeight : windowHeight - headerHeight - footerHeight;
+        $element.css('height', h + 'px');          
       })      
     }
   }

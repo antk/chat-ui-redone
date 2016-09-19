@@ -14,11 +14,22 @@ angular.module('chatApp.detail', ['ngRoute'])
     $scope.animateClass = 'animate-details';
     $scope.userId = parseInt($routeParams.uid, 10);
     var cid = parseInt($routeParams.id, 10);
+    $scope.messages = [];
+    $scope.newMessageText = "";
+
+    $scope.insertMessage = function(msg) {
+      var msgId = $scope.messages[$scope.messages.length-1].msg_id+1;
+      msg = {"msg_id":msgId, "sender_id":$scope.userId, "text":$scope.newMessageText, "datetime":"", "last":true};
+      $scope.messages.push(msg);
+    };
+
+    $scope.setMessage = function($event) {
+      $scope.newMessageText = $event.target.innerText;
+    };
+
     UserChatService.getChatById($scope.userId, cid).then(function(chat) {
-      console.log(chat);
-      $scope.participants = chat.participants;
-      $scope.messages = [];
       $scope.pageTitle = [];
+      $scope.participants = chat.participants;
 
       for(var i=0; i<chat.messages.length; i++) {
         // look at the next message
@@ -45,7 +56,6 @@ angular.module('chatApp.detail', ['ngRoute'])
         $scope.messages.push(msg);
       }
 
-      console.log($scope.pageTitle);
     });
   }
 ]);
