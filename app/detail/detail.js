@@ -19,8 +19,9 @@ angular.module('chatApp.detail', ['ngRoute'])
 
     $scope.insertMessage = function(msg) {
       var msgId = $scope.messages[$scope.messages.length-1].msg_id+1;
-      msg = {"msg_id":msgId, "sender_id":$scope.userId, "text":$scope.newMessageText, "datetime":"", "last":true};
+      msg = {"msg_id":msgId, "sender_id":$scope.userId, "text":$scope.newMessageText, "datetime":new Date().getTime(), "last":true};
       $scope.messages.push(msg);
+      UserChatService.insertMessage(cid, msg);
     };
 
     $scope.setMessage = function($event) {

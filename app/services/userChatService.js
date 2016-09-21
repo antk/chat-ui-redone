@@ -50,13 +50,14 @@ angular.module('chatApp')
       });
     };
 
-    var addMessage = function(cid, msg) {
-
+    var insertMessage = function(cid, msg) {
+      data.chats[cid].messages.push(msg);
     };
 
     return {
       getUserData: getUserData,
-      getChatById: getChatById
+      getChatById: getChatById,
+      insertMessage: insertMessage
     };
   }
 ]);
