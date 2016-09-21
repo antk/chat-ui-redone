@@ -1,3 +1,5 @@
+// this directive taken from the example at angular docs here: https://docs.angularjs.org/api/ng/type/ngModel.NgModelController
+
 'use-strict';
 
 angular.module('chatApp')
