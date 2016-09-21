@@ -23,6 +23,7 @@ angular.module('chatApp.detail', ['ngRoute'])
       $scope.messages.push(msg);
       UserChatService.insertMessage(cid, msg);
       $scope.clearField(); // this is a function in the contenteditable directive
+      $scope.focusField(); // this is also a function in the contenteditable directive
     };
 
     UserChatService.getChatById($scope.userId, cid).then(function(chat) {

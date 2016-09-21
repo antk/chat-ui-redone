@@ -29,6 +29,10 @@ angular.module('chatApp')
       scope.clearField = function() {
         element.html("");
       }
+
+      scope.focusField = function() {
+        element[0].focus();
+      }
     }
   }
 }]);
