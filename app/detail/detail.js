@@ -18,12 +18,14 @@ angular.module('chatApp.detail', ['ngRoute'])
     $scope.newMessageText = "";
 
     $scope.insertMessage = function(msg) {
-      var msgId = $scope.messages[$scope.messages.length-1].msg_id+1;
-      msg = {"msg_id":msgId, "sender_id":$scope.userId, "text":$scope.newMessageText, "datetime":new Date().getTime(), "last":true};
-      $scope.messages.push(msg);
-      UserChatService.insertMessage(cid, msg);
-      $scope.clearField(); // this is a function in the contenteditable directive
-      $scope.focusField(); // this is also a function in the contenteditable directive
+      if($scope.newMessageText.length > 0) {
+        var msgId = $scope.messages[$scope.messages.length-1].msg_id+1;
+        msg = {"msg_id":msgId, "sender_id":$scope.userId, "text":$scope.newMessageText, "datetime":new Date().getTime(), "last":true};
+        $scope.messages.push(msg);
+        UserChatService.insertMessage(cid, msg);
+        $scope.clearField(); // this is a function in the contenteditable directive
+        $scope.focusField(); // this is also a function in the contenteditable directive
+      }
     };
 
     UserChatService.getChatById($scope.userId, cid).then(function(chat) {
