@@ -11,5 +11,5 @@ angular.module('chatApp', [
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/list'});
+  $routeProvider.otherwise({redirectTo: '/list/0'});
 }]);

@@ -22,7 +22,6 @@ angular.module('chatApp.list', ['ngRoute'])
         chatsArray.push(obj);
       }
       $scope.userChats = chatsArray;
-      console.log($scope.userChats);
     });
   }
 }]);

@@ -8,9 +8,7 @@ angular.module('chatApp')
       scrollBottom: "="
     },
     link: function(scope, element, attrs) {
-      // angular.element(document).ready(function() {
-
-      // });
+      
       scope.$watchCollection('scrollBottom', function(newValue) {
         if(newValue) {
           $timeout(function() {
