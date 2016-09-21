@@ -7,12 +7,12 @@ angular.module('chatApp')
     restrict: 'E',
     scope: true,
     templateUrl: '/components/directives/section-header/section-header.html',
-    link: function($scope, $element, $attrs) {
-      $scope.type = $attrs.type;
-      $scope.title = $attrs.title;
-      $scope.$watchGroup(['pageTitle'], function(newValue, oldValue) {
+    link: function(scope, element, attrs) {
+      scope.type = attrs.type;
+      scope.title = attrs.title;
+      scope.$watchGroup(['pageTitle'], function(newValue, oldValue) {
         if(newValue[0]) {
-          $scope.title = newValue[0].join(', ');
+          scope.title = newValue[0].join(', ');
         }
       })
     }

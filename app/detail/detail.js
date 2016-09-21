@@ -22,10 +22,7 @@ angular.module('chatApp.detail', ['ngRoute'])
       msg = {"msg_id":msgId, "sender_id":$scope.userId, "text":$scope.newMessageText, "datetime":new Date().getTime(), "last":true};
       $scope.messages.push(msg);
       UserChatService.insertMessage(cid, msg);
-    };
-
-    $scope.setMessage = function($event) {
-      $scope.newMessageText = $event.target.innerText;
+      $scope.clearField(); // this is a function in the contenteditable directive
     };
 
     UserChatService.getChatById($scope.userId, cid).then(function(chat) {
